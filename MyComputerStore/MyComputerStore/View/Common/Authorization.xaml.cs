@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyComputerStore
+namespace MyComputerStore.View.Common
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Authorization.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Authorization : Window
     {
-        public MainWindow()
+        public Authorization()
         {
             InitializeComponent();
         }
