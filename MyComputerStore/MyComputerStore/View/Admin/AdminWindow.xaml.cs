@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyComputerStore.View.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,16 @@ namespace MyComputerStore.View.Admin
         public AdminWindow()
         {
             InitializeComponent();
+            
+            // Ссылка на стартовую страницу
+            frame.Navigate(new OrdersPage());
+        }
+
+
+        // Событие на клик кнопки компонентов
+        private void ComponentsPage(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new ComponentsPage());
         }
     }
 }

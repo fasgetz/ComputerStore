@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyComputerStore.View.Admin"
         mc:Ignorable="d"
-        Title="AdminWindow" Height="450" Width="800">
+        Title="AdminWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
+        <StackPanel>
+            <Menu HorizontalAlignment="Left" Height="40" Width="790">
+                <MenuItem Header="Заказы" Height="40" Width="70" FontSize="16" HorizontalContentAlignment="Center"/>
+                <MenuItem Header="Сборки ПК" Height="40" Width="100" FontSize="16" HorizontalContentAlignment="Center"/>
+                <MenuItem Click="ComponentsPage" Header="Комплектующие" Height="40" Width="140" FontSize="16" HorizontalContentAlignment="Center"/>
+                <MenuItem Header="Пользователи" Height="40" Width="120" FontSize="16" HorizontalContentAlignment="Center"/>
+            </Menu>
+            <Frame x:Name="frame" NavigationUIVisibility="Hidden" Height="380" />
+        </StackPanel>
         
     </Grid>
 </Window>
