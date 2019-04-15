@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyComputerStore.LogicApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,17 @@ namespace MyComputerStore.View.Common
         public Authorization()
         {
             InitializeComponent();
+        }
+
+        // Событие на клик кнопки войти
+        private void authorization_click(object sender, RoutedEventArgs e)
+        {
+            // Открываем окно, в зависимости от типа пользователя, который проходит авторизацию (или не проходит) по логику и паролю
+            bool opened = WindowLogic.OpenWindow(UserLogic.Authorization(loginbox.Text, passbox.Password));
+
+            // Если окно открыто, то закрой текущее окно
+            if (opened == true)
+                this.Close();
         }
     }
 }

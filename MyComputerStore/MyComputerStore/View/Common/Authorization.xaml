@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyComputerStore.View.Common"
         mc:Ignorable="d"
-        Title="Authorization" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Authorization" Height="150" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <StackPanel Margin="10,10,10,0">
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="16" Content="Логин" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="30" Width="116"/>
+                <TextBox x:Name="loginbox" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" Height="30" MaxLength="20" VerticalAlignment="Top" Width="155"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="16" Content="Пароль" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Height="30" Width="116"/>
+                <PasswordBox x:Name="passbox" FontSize="16" MaxLength="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="155"/>
+            </StackPanel>
+            <Button Click="authorization_click" FontSize="16" Content="Войти" Margin="0,5,0,0" VerticalAlignment="Top" Width="100"/>
+        </StackPanel>
     </Grid>
 </Window>

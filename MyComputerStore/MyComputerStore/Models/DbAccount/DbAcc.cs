@@ -13,10 +13,15 @@ namespace MyComputerStore.Models.DbAccount
         }
 
         public virtual DbSet<Accounts> Accounts { get; set; }
+        public virtual DbSet<PersonalInformation> PersonalInformation { get; set; }
         public virtual DbSet<UserStatuses> UserStatuses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Accounts>()
+                .HasOptional(e => e.PersonalInformation)
+                .WithRequired(e => e.Accounts)
+                .WillCascadeOnDelete();
         }
     }
 }

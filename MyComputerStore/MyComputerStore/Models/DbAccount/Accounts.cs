@@ -24,6 +24,8 @@ namespace MyComputerStore.Models.DbAccount
 
         public int idStatus { get; set; }
 
+        public virtual PersonalInformation PersonalInformation { get; set; }
+
         public virtual UserStatuses UserStatuses { get; set; }
     }
 }

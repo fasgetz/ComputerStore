@@ -64,6 +64,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="LogicApp\AdminLogic.cs" />
+    <Compile Include="LogicApp\UserLogic.cs" />
+    <Compile Include="LogicApp\WindowLogic.cs" />
+    <Compile Include="Models\DbAccount\Accounts.cs" />
+    <Compile Include="Models\DbAccount\DbAcc.cs" />
+    <Compile Include="Models\DbAccount\PersonalInformation.cs" />
+    <Compile Include="Models\DbAccount\UserStatuses.cs" />
+    <Compile Include="View\Admin\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Common\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
     </Compile>
@@ -71,15 +81,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Admin\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Common\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DbAccount\Accounts.cs" />
-    <Compile Include="Models\DbAccount\DbAcc.cs" />
-    <Compile Include="Models\DbAccount\UserStatuses.cs" />
     <Compile Include="Models\DbProduct\Components.cs" />
     <Compile Include="Models\DbProduct\Configuration.cs" />
     <Compile Include="Models\DbProduct\DbProd.cs" />
@@ -112,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Manager\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
