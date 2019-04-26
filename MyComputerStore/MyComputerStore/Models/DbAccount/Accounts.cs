@@ -8,6 +8,21 @@ namespace MyComputerStore.Models.DbAccount
 
     public partial class Accounts
     {
+
+        // Конструктор
+        public Accounts(string login, string password, int idStatus)
+        {
+            this.login = login;
+            this.password = password;
+            this.idStatus = idStatus;
+            this.DateRegistration = System.DateTime.Now;
+        }
+
+        public Accounts()
+        {
+
+        }
+
         [Key]
         public int idAccount { get; set; }
 

@@ -21,13 +21,14 @@ namespace MyComputerStore.LogicApp
         }
 
         // Метод, который получает список комплектующих по типу. Если тип не указан, то выведет весь список
-        public static List<Components> GetComponents(int idType = 0, int IdManufacturer = 0)
+        public static List<Components> GetComponents(int idType = 0)
         {
             // Если параметры не передали, то верни весь список
-            if (idType == 0 && IdManufacturer == 0)
+            if (idType == 0)
                 return new DbProd().Components.ToList();
             else
-                return new DbProd().Components.Where(i => i.IdType == idType && i.IdManufacturer == IdManufacturer).ToList();
+                // если параметры передали
+                return new DbProd().Components.Where(i => i.IdType == idType).ToList();
             
         }
 

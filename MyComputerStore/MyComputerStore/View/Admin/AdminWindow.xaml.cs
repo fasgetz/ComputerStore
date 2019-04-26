@@ -34,5 +34,10 @@ namespace MyComputerStore.View.Admin
         {
             frame.Navigate(new ComponentsPage());
         }
+
+        private void AccountsPage(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new AccountsPage());
+        }
     }
 }

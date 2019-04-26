@@ -36,10 +36,8 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label HorizontalContentAlignment="Center" Content="Тип"  Width="75" Height="25"/>
-                <ComboBox x:Name="CompTypesCB" DisplayMemberPath="TypeName" Width="200" Height="25"/>
-                <Label HorizontalContentAlignment="Center" Content="Производитель"  Width="100" Height="25"/>
-                <ComboBox x:Name="ManufactCB" DisplayMemberPath="name" Width="200" Height="25"/>
-                <Button  Content="Загрузить"  Width="210" Height="25" Click="Load_Click"/>
+                <ComboBox x:Name="CompTypesCB" DisplayMemberPath="TypeName" Width="310" Height="25"/>
+                <Button  Content="Загрузить"  Width="400" Height="25" Click="Load_Click"/>
             </StackPanel>
         </StackPanel>
         

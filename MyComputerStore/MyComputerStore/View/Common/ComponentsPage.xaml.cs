@@ -26,7 +26,6 @@ namespace MyComputerStore.View.Common
         {
             InitializeComponent();
 
-            ManufactCB.ItemsSource = CommonLogic.GetManufacturers();
             CompTypesCB.ItemsSource = CommonLogic.GetComponentsTypes();
             //Load();
         }
@@ -34,11 +33,10 @@ namespace MyComputerStore.View.Common
         // Событие на клик кнопки загрузить
         private void Load_Click(object sender, RoutedEventArgs e)
         {
-            var Manufacturer = (Manufacturers)ManufactCB.SelectedValue;
             var CompType = (TypesOfComponents)CompTypesCB.SelectedValue;
 
-            if (Manufacturer != null && CompType != null)
-                dgr.ItemsSource = CommonLogic.GetComponents(CompType.IdType, Manufacturer.IdManufacturer);
+            if (CompType != null)
+                dgr.ItemsSource = CommonLogic.GetComponents(CompType.IdType);
             else
                 dgr.ItemsSource = CommonLogic.GetComponents();
         }
