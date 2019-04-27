@@ -72,6 +72,14 @@
     <Compile Include="Models\DbAccount\DbAcc.cs" />
     <Compile Include="Models\DbAccount\PersonalInformation.cs" />
     <Compile Include="Models\DbAccount\UserStatuses.cs" />
+    <Compile Include="Models\DbProduct\Components.cs" />
+    <Compile Include="Models\DbProduct\Configuration.cs" />
+    <Compile Include="Models\DbProduct\DbProd.cs" />
+    <Compile Include="Models\DbProduct\Manufacturers.cs" />
+    <Compile Include="Models\DbProduct\OrderComponents.cs" />
+    <Compile Include="Models\DbProduct\Orders.cs" />
+    <Compile Include="Models\DbProduct\Properties\Monitor.cs" />
+    <Compile Include="Models\DbProduct\TypesOfComponents.cs" />
     <Compile Include="View\Admin\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
@@ -80,6 +88,9 @@
     </Compile>
     <Compile Include="View\Common\AccountsPage.xaml.cs">
       <DependentUpon>AccountsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Common\AddComponentsPage.xaml.cs">
+      <DependentUpon>AddComponentsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Common\Authorization.xaml.cs">
       <DependentUpon>Authorization.xaml</DependentUpon>
@@ -109,6 +120,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Common\AddComponentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Common\Authorization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -127,13 +142,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DbProduct\Components.cs" />
-    <Compile Include="Models\DbProduct\Configuration.cs" />
-    <Compile Include="Models\DbProduct\DbProd.cs" />
-    <Compile Include="Models\DbProduct\Manufacturers.cs" />
-    <Compile Include="Models\DbProduct\OrderComponents.cs" />
-    <Compile Include="Models\DbProduct\Orders.cs" />
-    <Compile Include="Models\DbProduct\TypesOfComponents.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

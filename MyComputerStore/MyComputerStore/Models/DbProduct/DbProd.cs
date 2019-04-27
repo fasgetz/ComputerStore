@@ -13,7 +13,7 @@ namespace MyComputerStore.Models.DbProduct
         }
 
         public virtual DbSet<Components> Components { get; set; }
-        public virtual DbSet<Configuration> _Configuration { get; set; }
+        public virtual DbSet<Configuration> configuration { get; set; }
         public virtual DbSet<Manufacturers> Manufacturers { get; set; }
         public virtual DbSet<OrderComponents> OrderComponents { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }

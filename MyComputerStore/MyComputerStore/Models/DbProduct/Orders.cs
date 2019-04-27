@@ -9,13 +9,14 @@ namespace MyComputerStore.Models.DbProduct
     public partial class Orders
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdOrder { get; set; }
 
         public DateTime DateOrder { get; set; }
 
         [Column(TypeName = "money")]
         public decimal money { get; set; }
+
+        public bool? Status { get; set; }
 
         public virtual OrderComponents OrderComponents { get; set; }
     }

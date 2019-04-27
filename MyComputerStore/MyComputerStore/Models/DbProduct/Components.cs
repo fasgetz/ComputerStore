@@ -12,7 +12,7 @@ namespace MyComputerStore.Models.DbProduct
         public Components()
         {
             OrderComponents = new HashSet<OrderComponents>();
-            Configuration = new HashSet<Configuration>();            
+            Configuration = new HashSet<Configuration>();
         }
 
         [Key]

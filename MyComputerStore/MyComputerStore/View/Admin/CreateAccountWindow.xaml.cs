@@ -40,7 +40,6 @@ namespace MyComputerStore.View.Admin
             // Получаем значение с комбобокса статуса аккаунта
             var status = (UserStatuses)StatusCB.SelectedItem;
 
-
             // Если заполнили входные данные, то создай аккаунт, иначе выдай ошибку, что необходимо заполнить данные
             if (login.Text != string.Empty && password.Text != string.Empty && status != null)
             {

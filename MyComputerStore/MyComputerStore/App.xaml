@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:MyComputerStore"
-             StartupUri="View/Common/Authorization.xaml">
+             StartupUri="View/Common/AddComponentsPage.xaml">
     <Application.Resources>
          
     </Application.Resources>
