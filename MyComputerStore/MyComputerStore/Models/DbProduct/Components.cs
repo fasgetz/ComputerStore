@@ -15,6 +15,18 @@ namespace MyComputerStore.Models.DbProduct
             Configuration = new HashSet<Configuration>();
         }
 
+        // Конструктор с параметрами
+        public Components(string Name, int IdType, int IdManufacturer, decimal Price, int AvailabilityCount, string Properties)
+        {
+            this.Name = Name;
+            this.IdType = IdType;
+            this.IdManufacturer = IdManufacturer;
+            this.Price = Price;
+            this.AvailabilityCount = AvailabilityCount;
+            this.Properties = Properties;
+        }
+
+
         [Key]
         public int IdComponent { get; set; }
 

@@ -43,5 +43,23 @@ namespace MyComputerStore.LogicApp
         {
             return new DbProd().TypesOfComponents.ToList();
         }
+
+        // Метод, который добавляет компонент в базу данных и возвращает true, в случае успеха
+        public static bool AddComponent(string Name, int IdType, int IdManufacturer, decimal Price, int AvailabilityCount, string Properties)
+        {
+            try
+            {
+                DbProd db = new DbProd(); // Создаем контекст БД
+                db.Components.Add(new Components(Name, IdType, IdManufacturer, Price, AvailabilityCount, Properties)); // Добавляем компонент в БД
+                db.SaveChanges(); // Сохраняем БД
+
+                return true;
+            }
+            catch (Exception)
+            {
+                return false; // В случае ошибки возвращаем false
+            }
+            
+        }
     }
 }

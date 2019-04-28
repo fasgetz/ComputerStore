@@ -22,6 +22,8 @@ namespace MyComputerStore.View.Common
     /// </summary>
     public partial class ComponentsPage : Page
     {
+        int SelectedType = 0; // Выбранный тип компонента
+
         public ComponentsPage()
         {
             InitializeComponent();
@@ -34,11 +36,28 @@ namespace MyComputerStore.View.Common
         private void Load_Click(object sender, RoutedEventArgs e)
         {
             var CompType = (TypesOfComponents)CompTypesCB.SelectedValue;
-
+            
+            // Если выбрали тип комплектующего, то загрузи комплектующие
             if (CompType != null)
-                dgr.ItemsSource = CommonLogic.GetComponents(CompType.IdType);
-            else
-                dgr.ItemsSource = CommonLogic.GetComponents();
+                SelectedType = CompType.IdType;
+
+            dgr.ItemsSource = CommonLogic.GetComponents(SelectedType);
+
+
+            //if (CompType != null)
+            //    dgr.ItemsSource = CommonLogic.GetComponents(CompType.IdType);
+            //else
+            //    dgr.ItemsSource = CommonLogic.GetComponents();
+        }
+
+        // Событие на клик кнопки добавить
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            // Если компонент добавлен успешно, то загрузи список комплектующих по новой
+            if (new AddComponentsPage().ShowDialog() == true)
+            {
+                dgr.ItemsSource = CommonLogic.GetComponents(SelectedType);
+            }
         }
     }
 }

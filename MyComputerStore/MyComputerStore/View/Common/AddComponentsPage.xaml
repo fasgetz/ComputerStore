@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyComputerStore.View.Common"
         mc:Ignorable="d"
-        Title="AddComponentsPage" Height="270" Width="570" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="AddComponentsPage" Height="470" Width="570" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="16"/>
@@ -20,34 +20,40 @@
         <Style TargetType="Button">
             <Setter Property="FontSize" Value="16"/>
         </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Width" Value="400"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Название"/>
-                <TextBox />
+                <TextBox x:Name="name" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Тип"/>
-                <TextBox />
+                <ComboBox x:Name="cb_type" DisplayMemberPath="TypeName" SelectionChanged="Type_SelectionCB" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Производитель"/>
-                <TextBox />
+                <ComboBox x:Name="cb_manufact" DisplayMemberPath="name"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Цена"/>
-                <TextBox MaxLength="8" PreviewTextInput="TextBox_PreviewTextInput" />
+                <TextBox x:Name="price" MaxLength="8" PreviewTextInput="TextBox_PreviewTextInput" />
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Количество"/>
-                <TextBox MaxLength="4" PreviewTextInput="TextBox_PreviewTextInput"/>
+                <TextBox x:Name="count" MaxLength="4" PreviewTextInput="TextBox_PreviewTextInput"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Характеристики"/>
-                <Button Width="400" Content="Добавить" Click="AddProperties_Click" />
+                <Label Content="Характеристики" Width="550"/>
             </StackPanel>
-            <Button Margin="15,5,10,0" Content="Добавить продукт" Height="30"/>
+            <StackPanel Height="180">
+                <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
+            </StackPanel>
+            <Button Margin="15,5,10,0" Content="Добавить продукт" Height="30" Click="AddProduct_Click"/>
         </StackPanel>
     </Grid>
 </Window>
